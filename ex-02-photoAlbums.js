@@ -21,10 +21,62 @@
 
 
 
+function PhotoAlbum() {
+this.photos = []
+}
+
+PhotoAlbum.prototype.addPicture = function(photo) {
+  this.input = []
+  this.input.push(photo)
+}
+
+PhotoAlbum.prototype.showPictures = function(filter) {
+for(var i = 0; i < filter.length; i++)
+// console.log(filter);
+this.array = []
+  // newArray.push(filter)
+  return this.array
+}
+
+function Photo(fotoName) {
+// this.tag = nameTag
+// console.log(fotoName);
+}
+
+Photo.prototype.tag = function(nameTag) {
+  this.names = []
+  this.names.push(nameTag)
+  // console.log(this.names);
+  return this.names
+}
+
+Photo.prototype.showTags = function() {
+
+console.log(this.names);
+// return this.names
+}
 
 
+var album = new PhotoAlbum();
+var p1, p2, p3;
 
+p1 = new Photo("Paris Trip 1");
+p1.tag("Jimmy");
+p1.tag("Jane");
+p1.tag("Jeff");
 
+album.addPicture(p1);
+
+p2 = new Photo("Look the Eiffel");
+p2.tag("Jimmy");
+p2.tag("Max");
+album.addPicture(p2);
+
+p3 = new Photo("OMG it's so high");
+p3.tag("Jimmy");
+p3.tag("Jane");
+
+album.addPicture(p3);
 
 console.log("[1] Check that `PhotoAlbum` is a function ")
 console.assert( typeof PhotoAlbum === 'function' )

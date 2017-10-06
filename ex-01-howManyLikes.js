@@ -2,11 +2,26 @@
  * Write a function called `Facebook` and shoud have two main functions:
  *
  *     [1]. howManyLikes: should return the likes number
- *     [2]. like: should increment the likes counting by one 
+ *     [2]. like: should increment the likes counting by one
  */
 
+function Facebook() {
+  this.likes = 20
+}
 
 
+Facebook.prototype.like = function() {
+   this.likes++
+// console.log(this.likes );
+}
+
+Facebook.prototype.howManyLikes = function() {
+
+  return (this.likes);
+}
+
+
+var theFacebook = new Facebook();
 
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~

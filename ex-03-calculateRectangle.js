@@ -4,8 +4,22 @@
  *     [1]. `area`, formula to calculate it: L x L
  *     [2]. `perimeter`: formula to calculate it: L + L + L + L
  */
+function Rectangle(ladoUno,ladoDos) {
+  this.ladoUno = ladoUno
+  this.ladoDos = ladoDos
+}
 
+Rectangle.prototype.area = function() {
+ this.area = this.ladoUno * this.ladoDos
 
+return this.area
+}
+
+Rectangle.prototype.perimeter = function() {
+this.perimetro = (this.ladoUno * 2) + (this.ladoDos * 2)
+
+return this.perimetro
+}
 
 
 
